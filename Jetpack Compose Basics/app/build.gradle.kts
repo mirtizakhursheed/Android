@@ -1,18 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    kotlin("kapt")
-    alias(libs.plugins.kotlinAndroidKsp)
-    alias(libs.plugins.hiltAndroid)
-    alias(libs.plugins.compose.compiler)
 }
 
 android {
-    namespace = "com.irtiza.foodtracker"
+    namespace = "com.irtiza.myapplication"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.irtiza.foodtracker"
+        applicationId = "com.irtiza.myapplication"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -44,7 +40,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.15"
+        kotlinCompilerExtensionVersion = "1.5.1"
     }
     packaging {
         resources {
@@ -63,8 +59,6 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation((libs.hilt.android))
-    kapt((libs.hilt.compiler))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
