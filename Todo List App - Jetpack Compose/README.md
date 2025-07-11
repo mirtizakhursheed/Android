@@ -1,10 +1,10 @@
-# Project Name
+# 📱 Todo List App - Jetpack Compose
 
 A brief description of your project and what it does.
 
 ---
 
-##  Features
+## 🚀 Features
 
 - Feature 1
 - Feature 2
@@ -12,7 +12,7 @@ A brief description of your project and what it does.
 
 ---
 
-##  Tech Stack
+## 🛠️ Tech Stack
 
 - Language/Framework: e.g., Kotlin, Android, Jetpack Compose
 - Architecture: e.g., MVVM, Clean Architecture
