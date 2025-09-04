@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.scope.ProjectInfo.Companion.getBaseName
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -68,4 +70,7 @@ dependencies {
     implementation (libs.androidx.datastore.preferences)
     implementation (libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+
+    // Compose Navigation
+    implementation(libs.androidx.navigation.compose)
 }

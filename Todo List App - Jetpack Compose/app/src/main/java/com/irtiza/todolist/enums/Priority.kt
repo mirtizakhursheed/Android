@@ -1,4 +1,4 @@
-package com.irtiza.todolist.data.models
+package com.irtiza.todolist.enums
 
 import androidx.compose.ui.graphics.Color
 import com.irtiza.todolist.ui.theme.HighPriorityColor
