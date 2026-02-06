@@ -1,10 +1,9 @@
-
 plugins {
     alias(libs.plugins.android.library)
 }
 
 android {
-    namespace = "com.irtiza.core"
+    namespace = "com.irtiza.core_ui"
     compileSdk {
         version = release(36)
     }
@@ -38,4 +37,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    debugImplementation(libs.androidx.compose.ui.tooling)
+    implementation(platform(libs.androidx.compose.bom))
 }
