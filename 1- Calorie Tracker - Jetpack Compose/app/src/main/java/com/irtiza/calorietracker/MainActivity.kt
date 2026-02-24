@@ -23,6 +23,8 @@ import com.irtiza.onboarding_presentation.activity.ActivityScreen
 import com.irtiza.onboarding_presentation.age.AgeScreen
 import com.irtiza.onboarding_presentation.gender.GenderScreen
 import com.irtiza.onboarding_presentation.goal.GoalScreen
+import com.irtiza.onboarding_presentation.height.HeightScreen
+import com.irtiza.onboarding_presentation.weight.WeightScreen
 import com.irtiza.onboarding_presentation.welcome.WelcomeScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -58,10 +60,14 @@ class MainActivity : ComponentActivity() {
                             GenderScreen(onNavigate = navController::navigateScreen)
                         }
                         composable(Route.HEIGHT_SCREEN) {
-
+                            HeightScreen(
+                                snackbarHostState = snackbarHostState,
+                                onNavigate = navController::navigateScreen)
                         }
                         composable(Route.WEIGHT_SCREEN) {
-
+                            WeightScreen(
+                                snackbarHostState = snackbarHostState,
+                                onNavigate = navController::navigateScreen)
                         }
                         composable(Route.NUTRIENT_GOAL_SCREEN) {
 
