@@ -1,4 +1,4 @@
-package com.irtiza.onboarding_presentation.age
+package com.irtiza.onboarding_presentation.weight
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -24,10 +24,10 @@ import com.irtiza.onboarding_presentation.welcome.components.ActionButton
 import com.irtiza.onboarding_presentation.welcome.components.UnitTextField
 
 @Composable
-fun AgeScreen(
+fun WeightScreen(
     snackbarHostState : SnackbarHostState,
     onNavigate: (UiEvent.Navigate) -> Unit,
-    viewModel: AgeViewModel = hiltViewModel()
+    viewModel: WeightViewModel = hiltViewModel()
 ) {
    val spacing = LocalSpacing.current
    val context = LocalContext.current
@@ -57,13 +57,13 @@ fun AgeScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = stringResource(id = R.string.whats_your_age),
+                text = stringResource(id = R.string.whats_your_weight),
                 style = MaterialTheme.typography.headlineLarge
             )
 
             Spacer(modifier = Modifier.height(spacing.spaceMedium))
 
-            UnitTextField(value = viewModel.age, onValueChange = viewModel::onAgeEnter, unit = stringResource(R.string.years), modifier = Modifier)
+            UnitTextField(value = viewModel.weight, onValueChange = viewModel::onWeightEnter, unit = stringResource(R.string.kg), modifier = Modifier)
         }
 
         ActionButton(

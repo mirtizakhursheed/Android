@@ -5,6 +5,7 @@ import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 import com.irtiza.core.data.preferences.DefaultPreferences
 import com.irtiza.core.domain.preferences.Preferences
+import com.irtiza.core.domain.usecase.FilterOutDigits
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,6 +28,12 @@ object AppModule {
     @Singleton
     fun providesPreferences(sharedPreferences : SharedPreferences) : Preferences {
         return DefaultPreferences(sharedPreferences)
+    }
+
+    @Provides
+    @Singleton
+    fun providesFilterOutDigitsUseCase(): FilterOutDigits {
+        return FilterOutDigits()
     }
 
 }
