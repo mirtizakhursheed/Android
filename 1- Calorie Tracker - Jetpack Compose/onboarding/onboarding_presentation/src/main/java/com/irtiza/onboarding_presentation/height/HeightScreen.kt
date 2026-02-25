@@ -20,9 +20,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.irtiza.core.R
 import com.irtiza.core.util.UiEvent
 import com.irtiza.core_ui.LocalSpacing
-import com.irtiza.onboarding_presentation.age.AgeViewModel
 import com.irtiza.onboarding_presentation.welcome.components.ActionButton
-import com.irtiza.onboarding_presentation.welcome.components.UnitTextField
+import com.irtiza.onboarding_presentation.components.UnitTextField
 
 @Composable
 fun HeightScreen(

@@ -24,6 +24,7 @@ import com.irtiza.onboarding_presentation.age.AgeScreen
 import com.irtiza.onboarding_presentation.gender.GenderScreen
 import com.irtiza.onboarding_presentation.goal.GoalScreen
 import com.irtiza.onboarding_presentation.height.HeightScreen
+import com.irtiza.onboarding_presentation.nutrient_goal.NutrientGoalScreen
 import com.irtiza.onboarding_presentation.weight.WeightScreen
 import com.irtiza.onboarding_presentation.welcome.WelcomeScreen
 import dagger.hilt.android.AndroidEntryPoint
@@ -70,7 +71,9 @@ class MainActivity : ComponentActivity() {
                                 onNavigate = navController::navigateScreen)
                         }
                         composable(Route.NUTRIENT_GOAL_SCREEN) {
-
+                            NutrientGoalScreen(
+                                snackbarHostState = snackbarHostState,
+                                onNavigate = navController::navigateScreen)
                         }
                         composable(Route.ACTIVITY_SCREEN) {
                             ActivityScreen(onNavigate = navController::navigateScreen)

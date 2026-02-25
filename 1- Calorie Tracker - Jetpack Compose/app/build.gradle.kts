@@ -61,7 +61,14 @@ dependencies {
 
     implementation(libs.hilt.navigation.compose)
 
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.gson)
+
+    implementation(libs.okhttp.core)
+    implementation(libs.okhttp.logging)
+
     implementation(project(":core"))
     implementation(project(":core-ui"))
     implementation(project(":onboarding:onboarding_presentation"))
+    implementation(project(":onboarding:onboarding_domain"))
 }
